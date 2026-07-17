@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Simulateur Eden</title>
@@ -7,43 +8,61 @@
 </head>
 
 <body>
-    <h1>Simulateur Eden</h1>
 
-    <div id="conteneur">
-        <!-- ZONE CHEVAL + TAPIS -->
-        <div id="zone-cheval">
-            <div id="fond-cheval"></div>
+<h1>Simulateur Eden</h1>
 
-            <img id="cheval" src="images/cheval.png">
+<div id="conteneur">
 
-            <div class="tapis">
-                <div class="couleur"></div>
-                <img id="tapis_carre" class="image-tapis" src="images/tapis_carre.png">
-                <img id="tapis_dressage" class="image-tapis" src="images/tapis_dressage.png" style="display:none;">
-            </div>
-        </div>
+    <!-- MENU -->
+    <div id="options">
 
-        <!-- PANEL OPTIONS -->
-        <div id="options">
-            <h2>Options :</h2>
+        <h2>Options</h2>
 
-            <h3>Formes du tapis</h3>
-            <div id="boutons-formes">
-                <button onclick="formeTapis('carre')">Tapis carré</button>
-                <button onclick="formeTapis('dressage')">Tapis dressage</button>
-            </div>
+        <h3>Forme du tapis</h3>
 
-            <h3>Couleurs du tapis</h3>
-            <div id="boutons-couleurs">
-                <button onclick="couleurTapis('#ff0000')">Rouge</button>
-                <button onclick="couleurTapis('#00ff00')">Vert</button>
-                <button onclick="couleurTapis('#0000ff')">Bleu</button>
-            </div>
+        <button onclick="formeTapis('carre')">Tapis carré</button>
+        <button onclick="formeTapis('dressage')">Tapis dressage</button>
 
-            <input type="color" id="picker" onchange="pickerCouleur()">
-        </div>
+        <h3>Couleur</h3>
+
+        <input
+            type="color"
+            id="picker"
+            value="#ff0000"
+            oninput="pickerCouleur()">
+
     </div>
 
-    <script src="script.js"></script>
+    <!-- ZONE CHEVAL -->
+
+    <div id="zone-cheval">
+
+        <div id="fond-cheval"></div>
+
+        <img id="cheval" src="images/cheval.png">
+
+        <div id="tapis">
+
+            <div id="couleur_tapis"></div>
+
+            <img
+                id="tapis_carre"
+                class="image-tapis"
+                src="images/tapis_carre.png">
+
+            <img
+                id="tapis_dressage"
+                class="image-tapis"
+                src="images/tapis_dressage.png"
+                style="display:none;">
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
