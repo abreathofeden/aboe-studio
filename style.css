@@ -15,3 +15,18 @@ body {
     left: 0;
     width: 600px;
 }
+#simulateur {
+    position: relative;
+    z-index: 1; /* les images passent derrière les boutons */
+}
+
+#simulateur img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+button {
+    position: relative;
+    z-index: 10; /* les boutons passent devant les images */
+}
