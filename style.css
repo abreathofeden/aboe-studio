@@ -1,73 +1,131 @@
-body {
-    font-family: sans-serif;
-    background-color: #f8d6e5; /* rose clair comme ton fond */
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f8d6e5;
 }
 
-#conteneur {
-    display: flex;
-    gap: 40px;
+h1{
+    text-align:center;
+}
+
+#conteneur{
+    display:flex;
+    gap:30px;
+    padding:20px;
+}
+
+/* MENU */
+
+#options{
+
+    width:230px;
+
+    background:#b46ad4;
+
+    padding:20px;
+
+    border-radius:15px;
+
 }
 
 /* ZONE CHEVAL */
-#zone-cheval {
-    position: relative;
-    width: 600px;
-    height: 400px;
+
+#zone-cheval{
+
+    position:relative;
+
+    width:700px;
+
+    height:500px;
+
+    background:#f8d6e5;
+
+    border-radius:15px;
+
 }
 
-/* Fond derrière le cheval */
-#fond-cheval {
-    position: absolute;
-    inset: 0;
-    background-color: #f8d6e5;
-    border-radius: 10px;
+/* CHEVAL */
+
+#cheval{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:60px;
+
+    width:520px;
+
+    z-index:1;
+
 }
 
-/* Cheval */
-#cheval {
-    position: absolute;
-    bottom: 0;
-    left: 80px;
-    width: 400px;
-    z-index: 1;
+/* TAPIS */
+
+#tapis{
+
+    position:absolute;
+
+    top:165px;
+
+    left:205px;
+
+    width:170px;
+
+    height:auto;
+
+    z-index:2;
+
 }
 
-/* Tapis (bloc) */
-.tapis {
-    position: absolute;
-    bottom: 140px; /* hauteur sous le cheval */
-    left: 150px;   /* position sous la selle */
-    width: 260px;
-    height: 180px;
-    z-index: 2;
+/* COULEUR */
+
+#couleur_tapis{
+
+    position:absolute;
+
+    inset:0;
+
+    background:red;
+
+    z-index:1;
+
 }
 
-/* Calque de couleur */
-.couleur {
-    position: absolute;
-    inset: 0;
-    background-color: #ff0000; /* couleur par défaut */
-    z-index: 1;
+/* IMAGE */
+
+.image-tapis{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:auto;
+
+    z-index:2;
+
+    mix-blend-mode:multiply;
+
 }
 
-/* Image du tapis */
-.image-tapis {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    mix-blend-mode: multiply;
+/* BOUTONS */
+
+button{
+
+    width:100%;
+
+    margin-bottom:8px;
+
+    padding:8px;
+
 }
 
-/* PANEL OPTIONS */
-#options {
-    width: 220px;
-    background-color: #b46ad4; /* violet comme ta barre */
-    padding: 20px;
-    border-radius: 10px;
-    color: #000;
-}
+input[type=color]{
 
-button {
-    margin: 4px 0;
-    width: 100%;
+    width:100%;
+
+    height:40px;
+
 }
