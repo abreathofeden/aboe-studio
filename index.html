@@ -14,7 +14,7 @@
 <div id="conteneur">
 
     <!-- MENU -->
-    <div id="options">
+    <div id="menu">
 
         <h2>Options</h2>
 
@@ -25,38 +25,29 @@
 
         <h3>Couleur</h3>
 
-        <input
-            type="color"
-            id="picker"
-            value="#ff0000"
-            oninput="pickerCouleur()">
+        <input type="color" id="picker" value="#ff0000" oninput="changerCouleur()">
 
     </div>
 
     <!-- ZONE CHEVAL -->
 
-    <div id="zone-cheval">
+    <div id="scene">
 
-        <div id="fond-cheval"></div>
-
-        <img id="cheval" src="images/cheval.png">
+        <!-- Tapis -->
 
         <div id="tapis">
 
-            <div id="couleur_tapis"></div>
+            <div id="couleur"></div>
 
-            <img
-                id="tapis_carre"
-                class="image-tapis"
-                src="images/tapis_carre.png">
+            <img id="tapis_carre" class="forme" src="images/tapis_carre.png">
 
-            <img
-                id="tapis_dressage"
-                class="image-tapis"
-                src="images/tapis_dressage.png"
-                style="display:none;">
+            <img id="tapis_dressage" class="forme" src="images/tapis_dressage.png">
 
         </div>
+
+        <!-- Cheval -->
+
+        <img id="cheval" src="images/cheval.png">
 
     </div>
 
@@ -65,4 +56,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
