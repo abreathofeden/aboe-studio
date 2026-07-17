@@ -11,10 +11,21 @@ body {
     z-index: 1; /* images derrière les boutons */
 }
 
-#simulateur img {
+/* CHEVAL (ne bouge pas) */
+#cheval {
     position: absolute;
-    top: 40px;   /* déplace le tapis vers le bas */
-    left: 80px;  /* déplace le tapis vers la droite */
+    top: 0;
+    left: 0;
+    width: 600px;
+    z-index: 1;
+}
+
+/* TAPIS (bouge indépendamment du cheval) */
+#tapis_carre,
+#tapis_dressage {
+    position: absolute;
+    top: 40px;   /* ajuste verticalement */
+    left: 80px;  /* ajuste horizontalement */
     width: 600px;
     z-index: 1;
 }
