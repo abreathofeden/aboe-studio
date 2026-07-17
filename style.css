@@ -1,37 +1,27 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Simulateur Eden</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
 
-<body>
+/* CONTENEUR DES IMAGES */
+#simulateur {
+    position: relative;
+    width: 600px;
+    margin: auto;
+    z-index: 1; /* images derrière les boutons */
+}
 
-<h1>Simulateur Eden</h1>
+/* SUPERPOSITION DES IMAGES */
+#simulateur img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    z-index: 1; /* chaque image derrière les boutons */
+}
 
-<!-- CONTENEUR DES IMAGES -->
-<div id="simulateur">
-    <img id="cheval" src="images/cheval.png">
-    <img id="tapis_carre" src="images/tapis_carre.png">
-    <img id="tapis_dressage" src="images/tapis_dressage.png" style="display:none;">
-</div>
-
-<h2>Formes du tapis</h2>
-<div id="boutons-formes">
-    <button onclick="formeTapis('carre')">Tapis carré</button>
-    <button onclick="formeTapis('dressage')">Tapis dressage</button>
-</div>
-
-<h2>Couleurs du tapis</h2>
-<div id="boutons-couleurs">
-    <button onclick="couleurTapis('#ff0000')">Rouge</button>
-    <button onclick="couleurTapis('#00ff00')">Vert</button>
-    <button onclick="couleurTapis('#0000ff')">Bleu</button>
-</div>
-
-<input type="color" id="picker" onchange="pickerCouleur()">
-
-<script src="script.js"></script>
-</body>
-</html>
+/* BOUTONS DEVANT LES IMAGES */
+button {
+    position: relative;
+    z-index: 10;
+}
