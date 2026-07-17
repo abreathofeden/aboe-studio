@@ -1,32 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
-/* CONTENEUR DES IMAGES */
-#simulateur {
-    position: relative;
-    width: 600px;
-    margin: auto;
-    z-index: 1;
-}
-
-/* CHEVAL – reste fixe */
+/* CHEVAL */
 #cheval {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50px;
+    left: 100px;
     width: 600px;
     z-index: 1;
 }
 
-/* TAPIS – se place indépendamment du cheval */
+/* TAPIS */
 #tapis_carre,
 #tapis_dressage {
     position: absolute;
-    top: 120px;   /* AJUSTÉ pour ressembler à ton image */
-    left: 140px;  /* AJUSTÉ pour ressembler à ton image */
-    width: 350px; /* taille du tapis pour correspondre à ton rendu */
+    top: 120px;
+    left: 140px;
+    width: 350px;
     z-index: 2;
     mix-blend-mode: multiply; /* coloration propre */
 }
@@ -35,23 +22,4 @@ body {
 button {
     position: relative;
     z-index: 10;
-}
-.tapis {
-    position: relative;
-    width: 300px; /* adapte à la taille de ton tapis */
-    height: 300px;
-}
-
-.couleur {
-    position: absolute;
-    inset: 0;
-    background-color: red; /* couleur par défaut */
-    z-index: 1;
-}
-
-.image-tapis {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    mix-blend-mode: multiply;
 }
