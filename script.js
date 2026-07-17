@@ -21,3 +21,6 @@ function pickerCouleur() {
     const couleur = document.getElementById("picker").value;
     couleurTapis(couleur);
 }
+function couleurTapis(couleur) {
+    document.querySelector('.couleur').style.backgroundColor = couleur;
+}
