@@ -1,3 +1,4 @@
+/* Changer la forme du tapis */
 function formeTapis(type) {
     document.getElementById("tapis_carre").style.display = "none";
     document.getElementById("tapis_dressage").style.display = "none";
@@ -9,6 +10,7 @@ function formeTapis(type) {
     }
 }
 
+/* Changer la couleur du tapis */
 function couleurTapis(couleur) {
     document.getElementById("tapis_carre").style.filter =
         `drop-shadow(0 0 0 ${couleur}) saturate(200%) brightness(120%)`;
@@ -17,10 +19,8 @@ function couleurTapis(couleur) {
         `drop-shadow(0 0 0 ${couleur}) saturate(200%) brightness(120%)`;
 }
 
+/* Input color */
 function pickerCouleur() {
     const couleur = document.getElementById("picker").value;
     couleurTapis(couleur);
-}
-function couleurTapis(couleur) {
-    document.querySelector('.couleur').style.backgroundColor = couleur;
 }
