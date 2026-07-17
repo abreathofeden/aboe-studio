@@ -8,10 +8,10 @@ body {
     position: relative;
     width: 600px;
     margin: auto;
-    z-index: 1; /* images derrière les boutons */
+    z-index: 1;
 }
 
-/* CHEVAL (ne bouge pas) */
+/* CHEVAL – reste fixe */
 #cheval {
     position: absolute;
     top: 0;
@@ -20,14 +20,15 @@ body {
     z-index: 1;
 }
 
-/* TAPIS (bouge indépendamment du cheval) */
+/* TAPIS – se place indépendamment du cheval */
 #tapis_carre,
 #tapis_dressage {
     position: absolute;
-    top: 40px;   /* ajuste verticalement */
-    left: 80px;  /* ajuste horizontalement */
-    width: 600px;
-    z-index: 1;
+    top: 120px;   /* AJUSTÉ pour ressembler à ton image */
+    left: 140px;  /* AJUSTÉ pour ressembler à ton image */
+    width: 350px; /* taille du tapis pour correspondre à ton rendu */
+    z-index: 2;
+    mix-blend-mode: multiply; /* coloration propre */
 }
 
 /* BOUTONS DEVANT LES IMAGES */
