@@ -1,22 +1,21 @@
-/* Changer la forme du tapis */
+/* Forme du tapis */
 function formeTapis(type) {
-    document.getElementById("tapis_carre").style.display = "none";
-    document.getElementById("tapis_dressage").style.display = "none";
+    const carre = document.getElementById("tapis_carre");
+    const dressage = document.getElementById("tapis_dressage");
+
+    carre.style.display = "none";
+    dressage.style.display = "none";
 
     if (type === "carre") {
-        document.getElementById("tapis_carre").style.display = "block";
+        carre.style.display = "block";
     } else {
-        document.getElementById("tapis_dressage").style.display = "block";
+        dressage.style.display = "block";
     }
 }
 
-/* Changer la couleur du tapis */
+/* Couleur du tapis (calque) */
 function couleurTapis(couleur) {
-    document.getElementById("tapis_carre").style.filter =
-        `drop-shadow(0 0 0 ${couleur}) saturate(200%) brightness(120%)`;
-
-    document.getElementById("tapis_dressage").style.filter =
-        `drop-shadow(0 0 0 ${couleur}) saturate(200%) brightness(120%)`;
+    document.querySelector('.couleur').style.backgroundColor = couleur;
 }
 
 /* Input color */
