@@ -11,13 +11,12 @@ body {
     z-index: 1; /* images derrière les boutons */
 }
 
-/* SUPERPOSITION DES IMAGES */
 #simulateur img {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 40px;   /* déplace le tapis vers le bas */
+    left: 80px;  /* déplace le tapis vers la droite */
     width: 600px;
-    z-index: 1; /* chaque image derrière les boutons */
+    z-index: 1;
 }
 
 /* BOUTONS DEVANT LES IMAGES */
