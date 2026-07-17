@@ -9,30 +9,40 @@
 <body>
     <h1>Simulateur Eden</h1>
 
-    <div id="simulateur">
-        <img id="cheval" src="images/cheval.png">
+    <div id="conteneur">
+        <!-- ZONE CHEVAL + TAPIS -->
+        <div id="zone-cheval">
+            <div id="fond-cheval"></div>
 
-        <!-- Tapis carré -->
-        <img id="tapis_carre" src="images/tapis_carre.png">
+            <img id="cheval" src="images/cheval.png">
 
-        <!-- Tapis dressage -->
-        <img id="tapis_dressage" src="images/tapis_dressage.png" style="display:none;">
+            <div class="tapis">
+                <div class="couleur"></div>
+                <img id="tapis_carre" class="image-tapis" src="images/tapis_carre.png">
+                <img id="tapis_dressage" class="image-tapis" src="images/tapis_dressage.png" style="display:none;">
+            </div>
+        </div>
+
+        <!-- PANEL OPTIONS -->
+        <div id="options">
+            <h2>Options :</h2>
+
+            <h3>Formes du tapis</h3>
+            <div id="boutons-formes">
+                <button onclick="formeTapis('carre')">Tapis carré</button>
+                <button onclick="formeTapis('dressage')">Tapis dressage</button>
+            </div>
+
+            <h3>Couleurs du tapis</h3>
+            <div id="boutons-couleurs">
+                <button onclick="couleurTapis('#ff0000')">Rouge</button>
+                <button onclick="couleurTapis('#00ff00')">Vert</button>
+                <button onclick="couleurTapis('#0000ff')">Bleu</button>
+            </div>
+
+            <input type="color" id="picker" onchange="pickerCouleur()">
+        </div>
     </div>
-
-    <h2>Formes du tapis</h2>
-    <div id="boutons-formes">
-        <button onclick="formeTapis('carre')">Tapis carré</button>
-        <button onclick="formeTapis('dressage')">Tapis dressage</button>
-    </div>
-
-    <h2>Couleurs du tapis</h2>
-    <div id="boutons-couleurs">
-        <button onclick="couleurTapis('#ff0000')">Rouge</button>
-        <button onclick="couleurTapis('#00ff00')">Vert</button>
-        <button onclick="couleurTapis('#0000ff')">Bleu</button>
-    </div>
-
-    <input type="color" id="picker" onchange="pickerCouleur()">
 
     <script src="script.js"></script>
 </body>
