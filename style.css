@@ -36,3 +36,22 @@ button {
     position: relative;
     z-index: 10;
 }
+.tapis {
+    position: relative;
+    width: 300px; /* adapte à la taille de ton tapis */
+    height: 300px;
+}
+
+.couleur {
+    position: absolute;
+    inset: 0;
+    background-color: red; /* couleur par défaut */
+    z-index: 1;
+}
+
+.image-tapis {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    mix-blend-mode: multiply;
+}
