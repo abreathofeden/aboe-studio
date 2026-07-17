@@ -1,25 +1,73 @@
-/* CHEVAL */
+body {
+    font-family: sans-serif;
+    background-color: #f8d6e5; /* rose clair comme ton fond */
+}
+
+#conteneur {
+    display: flex;
+    gap: 40px;
+}
+
+/* ZONE CHEVAL */
+#zone-cheval {
+    position: relative;
+    width: 600px;
+    height: 400px;
+}
+
+/* Fond derrière le cheval */
+#fond-cheval {
+    position: absolute;
+    inset: 0;
+    background-color: #f8d6e5;
+    border-radius: 10px;
+}
+
+/* Cheval */
 #cheval {
     position: absolute;
-    top: 50px;
-    left: 100px;
-    width: 600px;
+    bottom: 0;
+    left: 80px;
+    width: 400px;
     z-index: 1;
 }
 
-/* TAPIS */
-#tapis_carre,
-#tapis_dressage {
+/* Tapis (bloc) */
+.tapis {
     position: absolute;
-    top: 120px;
-    left: 140px;
-    width: 350px;
+    bottom: 140px; /* hauteur sous le cheval */
+    left: 150px;   /* position sous la selle */
+    width: 260px;
+    height: 180px;
     z-index: 2;
-    mix-blend-mode: multiply; /* coloration propre */
 }
 
-/* BOUTONS DEVANT LES IMAGES */
+/* Calque de couleur */
+.couleur {
+    position: absolute;
+    inset: 0;
+    background-color: #ff0000; /* couleur par défaut */
+    z-index: 1;
+}
+
+/* Image du tapis */
+.image-tapis {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    mix-blend-mode: multiply;
+}
+
+/* PANEL OPTIONS */
+#options {
+    width: 220px;
+    background-color: #b46ad4; /* violet comme ta barre */
+    padding: 20px;
+    border-radius: 10px;
+    color: #000;
+}
+
 button {
-    position: relative;
-    z-index: 10;
+    margin: 4px 0;
+    width: 100%;
 }
