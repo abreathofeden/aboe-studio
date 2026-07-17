@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#simulateur {
+    position: relative;
+    width: 600px;
+    margin: auto;
+}
+
+#simulateur img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+}
