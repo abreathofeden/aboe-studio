@@ -7,34 +7,33 @@
 </head>
 
 <body>
+    <h1>Simulateur Eden</h1>
 
-<h1>Simulateur Eden</h1>
+    <div id="simulateur">
+        <img id="cheval" src="images/cheval.png">
 
-<div id="simulateur">
-    <img id="cheval" src="images/cheval.png">
-    <img id="tapis_carre" src="images/tapis_carre.png">
-    <img id="tapis_dressage" src="images/tapis_dressage.png" style="display:none;">
-</div>
+        <!-- Tapis carré -->
+        <img id="tapis_carre" src="images/tapis_carre.png">
 
-<h2>Formes du tapis</h2>
-<div id="boutons-formes">
-    <button onclick="formeTapis('carre')">Tapis carré</button>
-    <button onclick="formeTapis('dressage')">Tapis dressage</button>
-</div>
+        <!-- Tapis dressage -->
+        <img id="tapis_dressage" src="images/tapis_dressage.png" style="display:none;">
+    </div>
 
-<h2>Couleurs du tapis</h2>
-<div id="boutons-couleurs">
-    <button onclick="couleurTapis('#ff0000')">Rouge</button>
-    <button onclick="couleurTapis('#00ff00')">Vert</button>
-    <button onclick="couleurTapis('#0000ff')">Bleu</button>
-</div>
+    <h2>Formes du tapis</h2>
+    <div id="boutons-formes">
+        <button onclick="formeTapis('carre')">Tapis carré</button>
+        <button onclick="formeTapis('dressage')">Tapis dressage</button>
+    </div>
 
-<input type="color" id="picker" onchange="pickerCouleur()">
+    <h2>Couleurs du tapis</h2>
+    <div id="boutons-couleurs">
+        <button onclick="couleurTapis('#ff0000')">Rouge</button>
+        <button onclick="couleurTapis('#00ff00')">Vert</button>
+        <button onclick="couleurTapis('#0000ff')">Bleu</button>
+    </div>
 
-<script src="script.js"></script>
+    <input type="color" id="picker" onchange="pickerCouleur()">
+
+    <script src="script.js"></script>
 </body>
 </html>
-<div class="tapis">
-    <div class="couleur"></div>
-    <img src="tapis.png" class="image-tapis">
-</div>
