@@ -1,40 +1,29 @@
-/* Forme du tapis */
-
 function formeTapis(type){
 
-    const carre=document.getElementById("tapis_carre");
+    let carre=document.getElementById("tapis_carre");
 
-    const dressage=document.getElementById("tapis_dressage");
+    let dressage=document.getElementById("tapis_dressage");
 
-    carre.style.display="none";
-    dressage.style.display="none";
-
-    if(type==="carre"){
+    if(type=="carre"){
 
         carre.style.display="block";
+        dressage.style.display="none";
 
     }
 
     else{
 
+        carre.style.display="none";
         dressage.style.display="block";
 
     }
 
 }
 
-/* Couleur */
+function changerCouleur(){
 
-function couleurTapis(couleur){
+    let couleur=document.getElementById("picker").value;
 
-    document.getElementById("couleur_tapis").style.backgroundColor=couleur;
-
-}
-
-/* Picker */
-
-function pickerCouleur(){
-
-    couleurTapis(document.getElementById("picker").value);
+    document.getElementById("couleur").style.backgroundColor=couleur;
 
 }
