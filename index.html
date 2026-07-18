@@ -7,55 +7,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-
-<h1>Simulateur Eden</h1>
-
-<div id="conteneur">
-
-    <!-- MENU -->
-    <div id="menu">
-
-        <h2>Options</h2>
-
-        <h3>Forme du tapis</h3>
-
-        <button onclick="formeTapis('carre')">Tapis carré</button>
-        <button onclick="formeTapis('dressage')">Tapis dressage</button>
-
-        <h3>Couleur</h3>
-
-        <input type="color" id="picker" value="#ff0000" oninput="changerCouleur()">
-
-    </div>
-
-    <!-- ZONE CHEVAL -->
-
-    <div id="scene">
-
-        <!-- Tapis -->
-
-        <div id="tapis">
-
-            <div id="couleur"></div>
-
-            <img id="tapis_carre" class="forme" src="images/tapis_carre.png">
-
-            <img id="tapis_dressage" class="forme" src="images/tapis_dressage.png">
-
+    <body>
+        <h1>Simulateur Eden</h1>
+    
+        <div id="conteneur">
+        
+            <!-- MENU -->
+            <div id="menu">
+        
+                <h2>Options</h2>
+        
+                <h3>Forme du tapis</h3>
+        
+                <button onclick="formeTapis('carre')">Tapis carré</button>
+                <button onclick="formeTapis('dressage')">Tapis dressage</button>
+        
+                <h3>Couleur</h3>
+        
+                <input type="color" id="picker" value="#ff0000" oninput="changerCouleur()">
+        
+            </div>
+        
+            <!-- ZONE CHEVAL -->
+        
+            <div id="scene">
+        
+                <!-- Tapis -->
+        
+                <div id="tapis">
+        
+                    <div id="couleur"></div>
+        
+                    <img id="tapis_carre" class="forme" src="images/tapis_carre.png">
+        
+                    <img id="tapis_dressage" class="forme" src="images/tapis_dressage.png">
+        
+                </div>
+        
+                <!-- Cheval -->
+                <img src="cheval_test.svg" id="cheval" alt="Ceci est un cheval" height="100" width="200"/>
+                <img src="crins_test.svg" id="crins" alt="Ceci est un crin de cheval" height="100" width="200"/>
+        
+            </div>
+        
         </div>
-
-        <!-- Cheval -->
-        <img src="cheval_test.svg" id="cheval" alt="Ceci est un cheval" height="100" width="200"/>
-        <img src="crins_test.svg" id="crins" alt="Ceci est un crin de cheval" height="100" width="200"/>
-
-    </div>
-
-</div>
-
-<script src="script.js"></script>
-<script>alert("BONJOUR CECI EST UN POPUP")</script>
-
-</body>
+    
+        <script src="script.js"></script>
+        <script>alert("BONJOUR CECI EST UN POPUP")</script>
+    
+    </body>
 
 </html>
