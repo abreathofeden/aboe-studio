@@ -160,4 +160,16 @@ input{
     p{
         color:red;
     }
+    #contenu_bulle_gauche{
+        width:50%;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+    }
+    #contenu_bulle_droite{
+        width:50%;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+    }
 }
