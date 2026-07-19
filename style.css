@@ -149,8 +149,8 @@ input{
 }
 
 #bulle_contact{
-    height:15%;
-    width:20%;
+    height:40%;
+    width:45%;
     background-color:green;
     border-radius: 25%;
     display: flex;
