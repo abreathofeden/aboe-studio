@@ -147,3 +147,17 @@ input{
     display:none;
 
 }
+
+#bulle_contact{
+    height:15%;
+    width:20%;
+    background-color:green;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-end;
+    p{
+        color:red;
+    }
+}
