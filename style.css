@@ -14,6 +14,37 @@ h1{
 
 }
 
+/* Fixe la barre tout en haut de la page */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Assure que la barre reste au-dessus du reste du contenu */
+    background-color: #CEB2A7; /* Ajoutez une couleur de fond pour éviter la transparence au scroll */
+    padding: 10px 20px;
+}
+
+/* Alignement des éléments du menu à droite */
+#navbar nav ul {
+    color: #6d3b22;
+    display: flex;
+    justify-content: flex-end; /* Aligne les éléments en haut à droite */
+    align-items: center;
+    list-style: none; /* Supprime les puces de la liste */
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Espacement entre les boutons */
+}
+
+/* Style des liens à l'intérieur des boutons */
+#navbar nav ul li button a {
+    color: inherit; /* Récupère la couleur du bouton */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    font-family: Adlery Pro Blockletter; /* Récupère la police du bouton */
+    display: inline-block;
+}
+
 #conteneur{
 
     display:flex;
@@ -148,28 +179,51 @@ input{
 
 }
 
-#bulle_contact{
-    height:40%;
-    width:45%;
-    background-color:green;
+#bulle_contact {
+    /* Positionnement en bas à droite de la page */
+    position: fixed; /* ou 'absolute' selon le comportement souhaité au scroll */
+    bottom: 20px;   /* Marge par rapport au bas (ajustable ou 0) */
+    right: 20px;    /* Marge par rapport à la droite (ajustable ou 0) */
+    z-index: 1000;  /* Pour s'assurer qu'il reste au-dessus des autres éléments */
+
+    margin: 0 auto; /* Centrer horizontalement si nécessaire */
+    padding: 2%;
+    height: 40%;
+    width: 30%;
+    background-color: green;
     border-radius: 25%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    align-content: flex-end;
-    p{
-        color:red;
+
+    .titre-bulle {
+        color: red;
+        text-align: center;
+        margin-bottom: 10px;
     }
-    #contenu_bulle_gauche{
-        width:50%;
-        height:100%;
-        display:flex;
-        flex-direction:column;
+
+    p {
+        color: red;
     }
-    #contenu_bulle_droite{
-        width:50%;
-        height:100%;
-        display:flex;
-        flex-direction:column;
+
+    .conteneur_colonnes {
+        display: flex;
+        flex-direction: row; /* Place les deux colonnes côte à côte */
+        width: 100%;
+        height: 100%;
+    }
+
+    #contenu_bulle_gauche {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contenu_bulle_droite {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 }
